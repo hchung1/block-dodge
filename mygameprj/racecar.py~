@@ -10,13 +10,11 @@ display_height = 600
 black = (0, 0, 0)
 white = (255, 255, 255)
 red = (255, 0, 0)
-orange = (255, 170, 0)
-blue = (0, 0, 255)
 
 car_width = 200
 
 gameDisplay = pygame.display.set_mode((display_width,display_height))
-pygame.display.set_caption('A Block Dodge')
+pygame.display.set_caption('A Bit Racey')
 clock = pygame.time.Clock()
 
 carImg = pygame.image.load('car.png')
@@ -70,9 +68,9 @@ def game_loop():
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    X_change = -10
+                    X_change = -5
                 elif event.key == pygame.K_RIGHT:
-                    X_change = 10
+                    X_change = 5
 
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
@@ -80,10 +78,10 @@ def game_loop():
 
         x += X_change
 
-        gameDisplay.fill(orange)
+        gameDisplay.fill(white)
 
         
-        things(thing_startx, thing_starty, thing_width, thing_height, blue)
+        things(thing_startx, thing_starty, thing_width, thing_height, black)
         thing_starty += thing_speed
         car (x,y)
 	
