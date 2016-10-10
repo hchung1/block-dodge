@@ -53,11 +53,11 @@ def game_loop():
 
     X_change = 0
 
-    thing_startx = random.randrange(0, display_width)
-    thing_starty = -600
     thing_speed = 7
     thing_width = 100
     thing_height = 100
+    thing_startx = random.randrange(0, display_width-thing_width)
+    thing_starty = random.randrange(-600, -200)
 
     gameExit = False
 
@@ -94,12 +94,8 @@ def game_loop():
             thing_starty = 0 - thing_height
             thing_startx = random.randrange(0, display_width)
 
-        #find out if the bottom box at the box height
         if y < thing_starty + thing_height:
-            print("y crossover")
-            #determining a collision
             if x > thing_startx and x < thing_startx + thing_width or x + car_width > thing_startx and x + car_width < thing_startx + thing_width:
-                print("x crossover")
                 crash()
                 
         pygame.display.update()
