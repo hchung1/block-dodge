@@ -61,8 +61,8 @@ def game_loop():
     thing_speed = 7
     thing_width = 100
     thing_height = 100
-    thing_startx = random.randrange(0, display_width-thing_width)
     thing_starty = random.randrange(-600, -200)
+    thing_startx = random.randrange(0, display_width-thing_width)
     
     dodged = 0
     
@@ -93,7 +93,7 @@ def game_loop():
         things(thing_startx, thing_starty, thing_width, thing_height, blue)
         thing_starty += thing_speed
         car (x,y)
-	things_missed(dodged)
+	counter(dodged)
 
         if x > display_width - car_width or x < 0:
             crash()
