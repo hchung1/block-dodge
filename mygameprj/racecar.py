@@ -13,13 +13,13 @@ red = (255, 0, 0)
 orange = (255, 170, 0)
 blue = (0, 0, 255)
 
-car_width = 200
+car_width = 100
 
 gameDisplay = pygame.display.set_mode((display_width,display_height))
 pygame.display.set_caption('A Block Dodge')
 clock = pygame.time.Clock()
 
-carImg = pygame.image.load('car.png')
+carImg = pygame.image.load('mainblock.png')
 
 def counter(count):
     font = pygame.font.SysFont(None, 25)
@@ -87,7 +87,7 @@ def game_loop():
 
         x += X_change
 
-        gameDisplay.fill(orange)
+        gameDisplay.fill(white)
 
         
         things(thing_startx, thing_starty, thing_width, thing_height, blue)
