@@ -12,6 +12,8 @@ white = (255, 255, 255)
 red = (255, 0, 0)
 orange = (255, 170, 0)
 blue = (0, 0, 255)
+violet = (142, 11, 195)
+green = (11, 195, 108)
 
 car_width = 100
 
@@ -89,8 +91,9 @@ def game_loop():
 
         gameDisplay.fill(white)
 
-        
-        things(thing_startx, thing_starty, thing_width, thing_height, blue)
+        colorrange = [blue, violet, orange, red, green]
+        i = random.randint(0,4)
+        things(thing_startx, thing_starty, thing_width, thing_height, colorrange[i])
         thing_starty += thing_speed
         car (x,y)
 	counter(dodged)
@@ -102,6 +105,8 @@ def game_loop():
             thing_starty = 0 - thing_height
             thing_startx = random.randrange(0, display_width)
             dodged += 1
+            thing_width = random.randrange(100,400)
+
         if y < thing_starty + thing_height:
             if x > thing_startx and x < thing_startx + thing_width or x + car_width > thing_startx and x + car_width < thing_startx + thing_width:
                 crash()
