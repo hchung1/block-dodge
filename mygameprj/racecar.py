@@ -60,7 +60,7 @@ def game_loop():
 
     X_change = 0
 
-    thing_speed = 7
+    thing_speed = 4
     thing_width = 100
     thing_height = 100
     thing_starty = random.randrange(-600, -200)
@@ -105,6 +105,7 @@ def game_loop():
             thing_starty = 0 - thing_height
             thing_startx = random.randrange(0, display_width)
             dodged += 1
+            thing_speed += 0.2
             thing_width = random.randrange(100,400)
 
         if y < thing_starty + thing_height:
