@@ -56,7 +56,7 @@ def crash():
 
 def game_loop():
     x = (display_width * 0.45)
-    y = (display_height * 0.7)
+    y = (display_height * 0.82)
 
     X_change = 0
 
@@ -96,7 +96,7 @@ def game_loop():
         things(thing_startx, thing_starty, thing_width, thing_height, colorrange[i])
         thing_starty += thing_speed
         car (x,y)
-	counter(dodged)
+        counter(dodged)
 
         if x > display_width - car_width or x < 0:
             crash()
