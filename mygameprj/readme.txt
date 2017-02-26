@@ -8,9 +8,12 @@ The blocks will eventually speed up.
 ###########################
 
 
-
-
-
+##########################
+####Known Problems########
+##########################
+I ran this code fine in my desktop (Ubuntu). 
+However, when Professor Richard Medina ran this code on his laptop (Ubuntu), the buttons no longer work.
+When attempting this on a new desktop, no errors when running this code.
 
 ####################
 History bug problems
