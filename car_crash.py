@@ -14,13 +14,13 @@ def message_display (text, color):
     
 #Place the string on the define function above
 def crash(color):
-    message_display('You Got Smacked', color)
+    message_display('You Crashed.', color)
     time.sleep(1)
     x = defeated()
     return x
 #Wall collision
 def knockedout(color):
-    message_display('Knocked Out By Wall', color)
+    message_display('Knocked Out By Wall.', color)
     time.sleep(1)
     x = defeated()
     return x
