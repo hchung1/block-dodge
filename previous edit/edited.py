@@ -21,18 +21,26 @@ gameDisplay = pygame.display.set_mode((display_width,display_height))
 pygame.display.set_caption('A Block Dodge')
 clock = pygame.time.Clock()
 
-carImg = pygame.image.load('mainblock.png')
 
+#count the score
 def counter(count):
+    #set text size
     font = pygame.font.SysFont(None, 25)
+    #set text color and import the counter
     text = font.render(str(count), True, black)
+    #Places the text in the top center of the screen
     gameDisplay.blit(text,(display_width/2,0))
 
-def things(thingx, thingy, thingw, thingh, color):
-    pygame.draw.rect(gameDisplay, color, [thingx, thingy, thingw, thingh])
+def attacker(posx, posy, attackerx, attackery, color):
+    pygame.draw.rect(gameDisplay, color, [posx, posy, attackerx, attackery])
 
-def car(x,y):
-    gameDisplay.blit(carImg,(x,y))
+
+def player(x,y):
+    #Find the image
+    player_image = pygame.image.load('mainblock.png')
+    #Display the image
+    gameDisplay.blit(player_image,(x,y))
+
 
 def text_objects(text, font):
     textSurface = font.render(text, True, black)
@@ -93,9 +101,9 @@ def game_loop():
 
         colorrange = [blue, violet, orange, red, green]
         i = random.randint(0,4)
-        things(thing_startx, thing_starty, thing_width, thing_height, colorrange[i])
+        attacker(thing_startx, thing_starty, thing_width, thing_height, colorrange[i])
         thing_starty += thing_speed
-        car (x,y)
+        player (x,y)
         counter(dodged)
 
         if x > display_width - car_width or x < 0:
