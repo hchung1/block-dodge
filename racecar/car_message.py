@@ -1,5 +1,3 @@
-from default_game import *
-
 ##Basic message setting
 def message_setting(text, font, color):
     #Descripe the text

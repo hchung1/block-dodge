@@ -1,4 +1,4 @@
-from default_game import *
+from block_fall_setting import *
 from car_message import message_setting
 from game_over import defeated
 #Prints the message
@@ -13,16 +13,10 @@ def message_display (text, color):
     time.sleep(2)
     
 #Place the string on the define function above
-def crash(color):
+def crash(color, score):
     message_display('You Crashed.', color)
     time.sleep(1)
-    x = defeated()
-    return x
-#Wall collision
-def knockedout(color):
-    message_display('Knocked Out By Wall.', color)
-    time.sleep(1)
-    x = defeated()
+    x = defeated(score)
     return x
 
 #count the score

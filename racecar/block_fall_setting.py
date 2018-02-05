@@ -7,6 +7,3 @@ game_screen_y = 600#Game Screen Height
 GameImage = pygame.display.set_mode((game_screen_x,game_screen_y))
 #Basic Clock
 clock = pygame.time.Clock()
-
-
-

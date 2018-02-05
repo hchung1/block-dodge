@@ -1,4 +1,4 @@
-from default_game import *
+from block_fall_setting import *
 import pygame
 
 #The falling Objects
