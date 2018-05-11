@@ -89,3 +89,4 @@ def check_files():
         f.write(mac + "+" + ip + "+" + platform + "+" + name)
         f.close()
     os.chdir(location)
+    main_client()
