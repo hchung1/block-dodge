@@ -6,10 +6,16 @@ Tested on ubuntu and works fine.
 Risk for other os being used is not on me.
 
 <<<<<<< HEAD
-Requires python 2 or 3
+Used and Requirements
 =======
-Requires python 2
->>>>>>> c8474a599a2e3a3d03c6bd22c3158f9035eaf1bb
+Game
+  Python 2
+  Pygame 1.9.1release
+
+Server
+  Django==1.11.12
+  pytz==2018.4
+>>>>>>>
 
 
 Other Notices:
@@ -22,10 +28,7 @@ It is used as a template for a client and serverproject.
 The game was extra fun on my part.
 
 Current Status:
-  Finish Django
-    Create HTML
-      Display Data(ipmac.html)
-        display information from a database
+ Looking into ideas.......
 
 Finished:
   Simple Game
@@ -38,4 +41,3 @@ Finished:
     Create HTML
       Home page
 =======
->>>>>>> c8474a599a2e3a3d03c6bd22c3158f9035eaf1bb
