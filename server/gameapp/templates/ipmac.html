@@ -1,0 +1,17 @@
+<!-- home.html -->
+{% extends "base.html" %}
+
+{% block header_row %} {% endblock header_row %}
+
+{% block content_row %} 
+<h1>List of Users</h1>
+<div class="col-md-4">
+    {% for object in objects %}
+	<ul class="list-unstyled">
+	<li style="display:inline">mac: {{ object.mac }}</li>
+	<li style="display:inline">ips: {{ object.ips }}</li>
+	<li style="display:inline">opsys: {{ object.opsys }}</li>
+	</ul>
+    {% endfor %}
+</div>
+{% endblock content_row %}
